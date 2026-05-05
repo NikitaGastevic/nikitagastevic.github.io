@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verslo ir Investicijų Objektai</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f0f4f8; color: #1a1a2e;
+      min-height: 100vh; display: flex; flex-direction: column;
+    }
+    header {
+      background: #1a3a5c; color: #fff;
+      padding: 1.2rem 2rem; display: flex; align-items: center; gap: 14px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.3);
+    }
+    .hdr-icon {
+      width: 42px; height: 42px; background: #2e86de;
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+    }
+    .hdr-icon svg { width: 22px; height: 22px; fill: #fff; }
+    header h1 { font-size: 1.25rem; font-weight: 700; }
+    header p  { font-size: 0.8rem; color: #a8c6e8; margin-top: 2px; }
+
+    main {
+      flex: 1; display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 3rem 1.5rem; gap: 1.5rem;
+    }
+    .intro { text-align: center; max-width: 540px; }
+    .intro h2 { font-size: 1.3rem; color: #1a3a5c; margin-bottom: .5rem; }
+    .intro p  { font-size: 0.9rem; color: #4a6278; line-height: 1.65; }
+
+    .cards { display: flex; gap: 1.25rem; flex-wrap: wrap; justify-content: center; }
+
+    .card {
+      background: #fff; border-radius: 14px; border: 1px solid #d0dce8;
+      padding: 2rem 1.75rem; width: 260px; text-align: center;
+      display: flex; flex-direction: column; align-items: center; gap: .85rem;
+      text-decoration: none; color: inherit; transition: box-shadow .2s, transform .15s;
+    }
+    .card:hover { box-shadow: 0 6px 24px rgba(26,58,92,.14); transform: translateY(-2px); }
+
+    .card-icon {
+      width: 56px; height: 56px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .card-icon svg { width: 28px; height: 28px; }
+    .icon-blue  { background: #dbeeff; }
+    .icon-blue svg  { fill: #1a6abf; }
+    .icon-green { background: #d6f5e6; }
+    .icon-green svg { fill: #1a7a4a; }
+
+    .card h3 { font-size: 1rem; font-weight: 700; color: #1a3a5c; }
+    .card p  { font-size: 0.8rem; color: #5a7a96; line-height: 1.55; }
+
+    .card-btn {
+      margin-top: .25rem; color: #fff; border: none;
+      border-radius: 8px; padding: 9px 22px;
+      font-size: 0.82rem; font-weight: 600; cursor: pointer;
+      width: 100%; font-family: inherit; transition: background .15s;
+    }
+    .blue-btn  { background: #2e86de; }
+    .blue-btn:hover  { background: #1a5fa8; }
+    .green-btn { background: #1a9e5c; }
+    .green-btn:hover { background: #15784a; }
+
+    footer {
+      background: #1a3a5c; color: #6a8fa8;
+      font-size: 0.72rem; padding: .6rem 2rem; text-align: center;
+    }
+    footer a { color: #a8c6e8; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hdr-icon">
+    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
+  </div>
+  <div>
+    <h1>Verslo ir Investicijų Objektai</h1>
+    <p>Interaktyvus gyventojų pasiūlymų registravimo ir peržiūros portalas</p>
+  </div>
+</header>
+
+<main>
+  <div class="intro">
+    <h2>Pasirinkite veiksmą</h2>
+    <p>Peržiūrėkite viešus verslo ir investicijoms skirtus objektus arba pateikite naują pasiūlymą administratoriaus peržiūrai.</p>
+  </div>
+
+  <div class="cards">
+    <a href="verslo_objektu_perziura.html" class="card">
+      <div class="card-icon icon-blue">
+        <svg viewBox="0 0 24 24"><path d="M20.5 3l-.16.03L15 5.1 9 3 3.36 4.9c-.21.07-.36.25-.36.48V20.5c0 .28.22.5.5.5l.16-.03L9 18.9l6 2.1 5.64-1.9c.21-.07.36-.25.36-.48V3.5c0-.28-.22-.5-.5-.5zM15 19l-6-2.11V5l6 2.11V19z"/></svg>
+      </div>
+      <h3>Peržiūrėti objektus</h3>
+      <p>Žemėlapyje matomi visi patvirtinti verslo ir investicijoms skirti objektai su aprašymais.</p>
+      <button class="card-btn blue-btn">Atidaryti žemėlapį →</button>
+    </a>
+
+    <a href="verslo_objekto_registravimas.html" class="card">
+      <div class="card-icon icon-green">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+      </div>
+      <h3>Pateikti pasiūlymą</h3>
+      <p>Užpildykite formą ir pateikite naują verslo ar investicijų objektą administratoriaus peržiūrai.</p>
+      <button class="card-btn green-btn">Pildyti formą →</button>
+    </a>
+  </div>
+</main>
+
+<footer>
+  Verslo ir Investicijų Objektų portalas &nbsp;·&nbsp;
+  Duomenys: <a href="https://www.arcgis.com" target="_blank" rel="noopener">ArcGIS Online</a> &nbsp;·&nbsp;
+  Autorius: [Nikita Gastevič] &nbsp;·&nbsp; [Vilniaus Unevsitetas]
+</footer>
+
+</body>
+</html>
