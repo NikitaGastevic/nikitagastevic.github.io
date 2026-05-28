@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaktyvūs Žemėlapiai | Nikita Gastevič</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <span class="logo-icon">🗺️</span>
+                <span class="logo-text">GeoAtlas</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Pradžia</a></li>
+                    <li><a href="#apie">Apie</a></li>
+                    <li><a href="#zemellapiai">Žemėlapiai</a></li>
+                    <li><a href="#info">Informacija</a></li>
+                    <li><a href="kontaktai.html">Kontaktai</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Interaktyvūs Geografiniai Žemėlapiai</h1>
+            <p>Kartografijos ir GIS studijų praktinių darbų rinkinys — kepler.gl, Geoportal ir ArcGIS Online žemėlapiai vienoje vietoje.</p>
+            <a href="#zemellapiai" class="btn-primary">Žiūrėti žemėlapius</a>
+        </div>
+    </section>
+
+    <section id="apie" class="section-apie">
+        <div class="container">
+            <h2>Apie svetainę</h2>
+            <p class="apie-intro">
+                Ši svetainė sukurta Vilniaus Universiteto Kartografijos ir GIS studijų programos praktinių užsiėmimų metu.
+                Čia pateikiami trys skirtingų tipų interaktyvūs žemėlapiai, sukurti naudojant šiuolaikines GIS technologijas.
+            </p>
+            <div class="korteliu-eilute">
+                <div class="kortele">
+                    <div class="kortele-ikona">📍</div>
+                    <h3>1 užduotis — Kepler.gl</h3>
+                    <p>Atvirojo kodo WebGL pagrindu veikianti geospatialinių duomenų vizualizacijos platforma, sukurta Uber Technologies ir perduota Urban Computing Foundation.</p>
+                </div>
+                <div class="kortele">
+                    <div class="kortele-ikona">🏗️</div>
+                    <h3>2 užduotis — Geoportal.lt</h3>
+                    <p>Oficialus Lietuvos erdvinių duomenų infrastruktūros portalas, kuriame kaupiami ir skelbiami valstybiniai GIS duomenys bei teminiai žemėlapiai.</p>
+                </div>
+                <div class="kortele">
+                    <div class="kortele-ikona">🌐</div>
+                    <h3>3 užduotis — ArcGIS Online</h3>
+                    <p>Esri kompanijos debesų pagrindu veikianti GIS platforma, leidžianti kurti, analizuoti, redaguoti ir dalintis interaktyviais geografiniais duomenimis internete.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="foto-sekcija">
+        <div class="foto-blokas">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Lietuva_Vilnius1.jpg/1280px-Lietuva_Vilnius1.jpg"
+                 alt="Vilniaus miestas iš viršaus"
+                 onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800'">
+            <div class="foto-tekstas">
+                <h3>Miestas</h3>
+                <p>Erdvinių duomenų analizė miesto aplinkoje — pastatai, infrastruktūra, verslo objektai.</p>
+            </div>
+        </div>
+        <div class="foto-blokas">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Aukstaitija_National_Park_-_panoramio_%2817%29.jpg/1280px-Aukstaitija_National_Park_-_panoramio_%2817%29.jpg"
+                 alt="Lietuvos miškas"
+                 onerror="this.src='https://images.unsplash.com/photo-1448375240586-882707db888b?w=800'">
+            <div class="foto-tekstas">
+                <h3>Gamta</h3>
+                <p>Geografiniai duomenys apima ne tik urbanistinę aplinką — miškų, vandenų ir gamtinių teritorijų analizė.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="zemellapiai" class="section-zemellapiai">
+        <div class="container">
+            <h2>Žemėlapiai</h2>
+
+            <div class="zemelapis-blokas">
+                <div class="zemelapis-info">
+                    <span class="zemelapis-numeris">01</span>
+                    <h3>Kepler.gl — Duomenų vizualizacija</h3>
+                    <p>Kepler.gl yra atvirojo kodo, WebGL technologijomis pagrįsta platforma didelių erdvinių duomenų vizualizacijai. Įrankis leidžia kurti interaktyvius 2D ir 3D žemėlapius naršyklėje, neprogramuojant.</p>
+                    <div class="zemelapis-mygtukai">
+                        <button class="tab-btn active" onclick="rodytizemelapi('map1.html', this)">Žemėlapis 1</button>
+                        <button class="tab-btn" onclick="rodytizemelapi('map2.html', this)">Žemėlapis 2</button>
+                        <button class="tab-btn" onclick="rodytizemelapi('map3.html', this)">Žemėlapis 3</button>
+                    </div>
+                    <a id="kepler-nuoroda" href="https://nikitagastevic.github.io/1_Praktinis/map1.html" target="_blank" class="btn-perziureti">Peržiūrėti daugiau ↗</a>
+                </div>
+                <div class="iframe-wrapper">
+                    <iframe id="kepler-iframe"
+                        src="https://nikitagastevic.github.io/1_Praktinis/map1.html"
+                        title="Kepler.gl žemėlapis"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="zemelapis-blokas reverse">
+                <div class="zemelapis-info">
+                    <span class="zemelapis-numeris">02</span>
+                    <h3>Geoportal.lt — Teminiai žemėlapiai</h3>
+                    <p>Geoportal.lt yra oficialus Lietuvos valstybinis erdvinių duomenų portalas. Jame kaupiami ir viešai skelbiami kadastro, topografijos, administracinių ribų ir kiti oficialūs GIS duomenys.</p>
+                    <a href="https://nikitagastevic.github.io/2_Praktinis/map.html" target="_blank" class="btn-perziureti">Peržiūrėti daugiau ↗</a>
+                </div>
+                <div class="iframe-wrapper">
+                    <iframe
+                        src="https://nikitagastevic.github.io/2_Praktinis/map.html"
+                        title="Geoportal žemėlapis"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="zemelapis-blokas">
+                <div class="zemelapis-info">
+                    <span class="zemelapis-numeris">03</span>
+                    <h3>ArcGIS Online — Verslo objektai</h3>
+                    <p>ArcGIS Online yra Esri kompanijos debesų GIS platforma, naudojama visame pasaulyje profesionalių kartografų ir GIS specialistų. Leidžia kurti interaktyvius žemėlapius, rinkti duomenis laukuose ir dalintis rezultatais internete.</p>
+                    <a href="https://nikitagastevic.github.io/3_Praktinis/index.html" target="_blank" class="btn-perziureti">Peržiūrėti daugiau ↗</a>
+                </div>
+                <div class="iframe-wrapper">
+                    <iframe
+                        src="https://nikitagastevic.github.io/3_Praktinis/index.html"
+                        title="ArcGIS Online žemėlapis"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="info" class="section-info">
+        <div class="container">
+            <h2>Naudotos technologijos</h2>
+            <div class="info-tinklelis">
+                <div class="info-kortele">
+                    <div class="img-placeholder">🗺️</div>
+                    <h3>Kepler.gl</h3>
+                    <p>Atvirojo kodo geospatialinių duomenų vizualizacijos įrankis, sukurtas Uber Technologies. Veikia WebGL technologijomis ir leidžia vizualizuoti milijonus taškų realiuoju laiku.</p>
+                </div>
+                <div class="info-kortele">
+                    <div class="img-placeholder">🇱🇹</div>
+                    <h3>Geoportal.lt</h3>
+                    <p>Lietuvos Respublikos erdvinių duomenų infrastruktūros portalas. Teikia prieigą prie oficialių valstybinių GIS duomenų — kadastro, topografijos, administracinių ribų ir kt.</p>
+                </div>
+                <div class="info-kortele">
+                    <div class="img-placeholder">🌍</div>
+                    <h3>ArcGIS Online</h3>
+                    <p>Esri kompanijos debesų GIS platforma — viena plačiausiai naudojamų pasaulyje. Leidžia kurti, analizuoti ir dalintis interaktyviais žemėlapiais bei erdviniais duomenimis.</p>
+                </div>
+                <div class="info-kortele">
+                    <div class="img-placeholder">💻</div>
+                    <h3>HTML & CSS</h3>
+                    <p>Svetainė sukurta naudojant grynąjį HTML5 ir CSS3 — be papildomų karkasų ar bibliotekų. Tai leidžia užtikrinti greitą veikimą ir pilną kodo kontrolę.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-turinys">
+                <div class="footer-blokas">
+                    <h4>GeoAtlas</h4>
+                    <p>Kartografijos ir GIS studijų praktinių darbų svetainė, sukurta Vilniaus Universitete.</p>
+                </div>
+                <div class="footer-blokas">
+                    <h4>Nuorodos</h4>
+                    <ul>
+                        <li><a href="index.html">Pradžia</a></li>
+                        <li><a href="#zemellapiai">Žemėlapiai</a></li>
+                        <li><a href="kontaktai.html">Kontaktai</a></li>
+                    </ul>
+                </div>
+                <div class="footer-blokas">
+                    <h4>Šaltiniai</h4>
+                    <ul>
+                        <li><a href="https://kepler.gl" target="_blank">kepler.gl</a></li>
+                        <li><a href="https://www.geoportal.lt" target="_blank">geoportal.lt</a></li>
+                        <li><a href="https://www.arcgis.com" target="_blank">ArcGIS Online</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-apacia">
+                <p>Nikita Gastevič | Vilniaus Universitetas | Kartografija ir GIS</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function rodytizemelapi(failas, mygtukas) {
+            var iframe = document.getElementById('kepler-iframe');
+            iframe.src = 'https://nikitagastevic.github.io/1_Praktinis/' + failas;
+
+            document.getElementById('kepler-nuoroda').href = 'https://nikitagastevic.github.io/1_Praktinis/' + failas;
+
+            var mygtukaiGrupe = mygtukas.parentElement.querySelectorAll('.tab-btn');
+            mygtukaiGrupe.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+            mygtukas.classList.add('active');
+        }
+
+        function toggleMenu() {
+            var nav = document.querySelector('nav ul');
+            nav.classList.toggle('open');
+        }
+    </script>
+
+</body>
+</html>

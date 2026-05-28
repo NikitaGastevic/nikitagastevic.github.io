@@ -1,0 +1,681 @@
+:root {
+    --spalva-pagr: #2c5f8a;
+    --spalva-akc: #4a9eca;
+    --spalva-tamsi: #1a2e3d;
+    --spalva-sviesi: #f4f8fb;
+    --spalva-tekstas: #333;
+    --spalva-pilka: #666;
+    --spalva-balta: #fff;
+    --spalva-footer: #1a2e3d;
+    --seselis: 0 2px 8px rgba(0,0,0,0.12);
+    --seselis-didelis: 0 4px 20px rgba(0,0,0,0.15);
+    --radius: 8px;
+    --maks-plotis: 1100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--spalva-tekstas);
+    background-color: var(--spalva-balta);
+}
+
+.container {
+    max-width: var(--maks-plotis);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Trebuchet MS', sans-serif;
+    line-height: 1.3;
+}
+
+a {
+    color: var(--spalva-pagr);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--spalva-akc);
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    background-color: var(--spalva-tamsi);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--seselis);
+}
+
+.header-inner {
+    max-width: var(--maks-plotis);
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--spalva-balta);
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.logo-icon {
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+nav ul li a {
+    color: #cde;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--spalva-balta);
+    border-bottom-color: var(--spalva-akc);
+    text-decoration: none;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--spalva-balta);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--spalva-tamsi) 0%, var(--spalva-pagr) 100%);
+    color: var(--spalva-balta);
+    padding: 90px 24px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    line-height: 1.25;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #b8d4e8;
+    margin-bottom: 32px;
+    line-height: 1.7;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--spalva-akc);
+    color: var(--spalva-balta);
+    padding: 12px 32px;
+    border-radius: var(--radius);
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-primary:hover {
+    background-color: #3a8eba;
+    color: var(--spalva-balta);
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+.section-apie {
+    padding: 70px 0;
+    background-color: var(--spalva-sviesi);
+}
+
+.section-apie h2 {
+    font-size: 1.9rem;
+    color: var(--spalva-tamsi);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.apie-intro {
+    text-align: center;
+    color: var(--spalva-pilka);
+    max-width: 680px;
+    margin: 0 auto 48px;
+    font-size: 1.05rem;
+}
+
+.korteliu-eilute {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.kortele {
+    background-color: var(--spalva-balta);
+    padding: 30px 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--seselis);
+    text-align: center;
+}
+
+.kortele-ikona {
+    font-size: 2.2rem;
+    margin-bottom: 14px;
+}
+
+.kortele h3 {
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+    color: var(--spalva-tamsi);
+}
+
+.kortele p {
+    font-size: 0.93rem;
+    color: var(--spalva-pilka);
+    line-height: 1.6;
+}
+
+.foto-sekcija {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 380px;
+}
+
+.foto-blokas {
+    position: relative;
+    overflow: hidden;
+}
+
+.foto-blokas img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.6);
+    transition: transform 0.4s ease;
+}
+
+.foto-blokas:hover img {
+    transform: scale(1.04);
+}
+
+.foto-tekstas {
+    position: absolute;
+    bottom: 28px;
+    left: 28px;
+    color: var(--spalva-balta);
+}
+
+.foto-tekstas h3 {
+    font-size: 1.6rem;
+    margin-bottom: 6px;
+}
+
+.foto-tekstas p {
+    font-size: 0.92rem;
+    color: #ddd;
+    max-width: 320px;
+    line-height: 1.5;
+}
+
+.section-zemellapiai {
+    padding: 70px 0;
+    background-color: var(--spalva-balta);
+}
+
+.section-zemellapiai h2 {
+    font-size: 1.9rem;
+    color: var(--spalva-tamsi);
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.zemelapis-blokas {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 36px;
+    margin-bottom: 70px;
+    align-items: stretch;
+}
+
+.zemelapis-blokas.reverse {
+    grid-template-columns: 2fr 1fr;
+}
+
+.zemelapis-blokas.reverse .zemelapis-info {
+    order: 2;
+}
+
+.zemelapis-blokas.reverse .iframe-wrapper {
+    order: 1;
+}
+
+.zemelapis-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 14px;
+}
+
+.zemelapis-numeris {
+    font-size: 3rem;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: var(--spalva-akc);
+    opacity: 0.45;
+    line-height: 1;
+}
+
+.zemelapis-info h3 {
+    font-size: 1.25rem;
+    color: var(--spalva-tamsi);
+}
+
+.zemelapis-info p {
+    color: var(--spalva-pilka);
+    font-size: 0.97rem;
+    line-height: 1.7;
+}
+
+.zemelapis-mygtukai {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 7px 16px;
+    border: 2px solid var(--spalva-pagr);
+    background: none;
+    color: var(--spalva-pagr);
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-size: 0.88rem;
+    font-family: 'Trebuchet MS', sans-serif;
+    transition: all 0.2s;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+    background-color: var(--spalva-pagr);
+    color: var(--spalva-balta);
+}
+
+.btn-perziureti {
+    display: inline-block;
+    background-color: var(--spalva-tamsi);
+    color: var(--spalva-balta);
+    padding: 10px 22px;
+    border-radius: var(--radius);
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 0.92rem;
+    margin-top: auto;
+    align-self: flex-start;
+    transition: background-color 0.2s;
+}
+
+.btn-perziureti:hover {
+    background-color: var(--spalva-pagr);
+    color: var(--spalva-balta);
+    text-decoration: none;
+}
+
+.iframe-wrapper {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--seselis-didelis);
+    background-color: #eee;
+    min-height: 480px;
+}
+
+.iframe-wrapper iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+    border: none;
+}
+
+.section-info {
+    padding: 70px 0;
+    background-color: var(--spalva-sviesi);
+}
+
+.section-info h2 {
+    font-size: 1.9rem;
+    color: var(--spalva-tamsi);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.info-tinklelis {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.info-kortele {
+    background-color: var(--spalva-balta);
+    padding: 24px 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--seselis);
+    text-align: center;
+}
+
+.img-placeholder {
+    font-size: 2.5rem;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+
+.info-kortele h3 {
+    font-size: 1rem;
+    color: var(--spalva-tamsi);
+    margin-bottom: 8px;
+}
+
+.info-kortele p {
+    font-size: 0.88rem;
+    color: var(--spalva-pilka);
+    line-height: 1.6;
+}
+
+.puslapio-antraste {
+    background-color: var(--spalva-tamsi);
+    color: var(--spalva-balta);
+    padding: 50px 24px;
+    text-align: center;
+}
+
+.puslapio-antraste h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.puslapio-antraste p {
+    color: #b8d4e8;
+    font-size: 1.05rem;
+}
+
+.kontaktu-sekcija {
+    padding: 60px 0;
+    background-color: var(--spalva-sviesi);
+}
+
+.kontaktu-tinklelis {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.kurejas-kortele {
+    background-color: var(--spalva-balta);
+    padding: 36px 28px;
+    border-radius: var(--radius);
+    box-shadow: var(--seselis);
+    text-align: center;
+}
+
+.kurejas-foto {
+    margin-bottom: 20px;
+}
+
+.foto-placeholder {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: var(--spalva-pagr);
+    color: var(--spalva-balta);
+    font-size: 1.6rem;
+    font-family: 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.kurejas-kortele h2 {
+    font-size: 1.3rem;
+    color: var(--spalva-tamsi);
+    margin-bottom: 6px;
+}
+
+.kurejas-pareigos {
+    font-size: 0.9rem;
+    color: var(--spalva-akc);
+    margin-bottom: 16px;
+}
+
+.kurejas-aprasymas {
+    font-size: 0.92rem;
+    color: var(--spalva-pilka);
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.kontaktu-detaliai {
+    text-align: left;
+}
+
+.kontaktas-eilute {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 0.92rem;
+    color: var(--spalva-tekstas);
+}
+
+.kontaktas-eilute:last-child {
+    border-bottom: none;
+}
+
+.kontaktas-ikona {
+    font-size: 1.1rem;
+    width: 24px;
+    text-align: center;
+}
+
+.forma-kortele {
+    background-color: var(--spalva-balta);
+    padding: 36px 28px;
+    border-radius: var(--radius);
+    box-shadow: var(--seselis);
+}
+
+.forma-kortele h2 {
+    font-size: 1.3rem;
+    color: var(--spalva-tamsi);
+    margin-bottom: 10px;
+}
+
+.forma-kortele > p {
+    color: var(--spalva-pilka);
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.iframe-forma-wrapper {
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.iframe-forma-wrapper iframe {
+    display: block;
+    width: 100%;
+    height: 520px;
+    border: none;
+}
+
+footer {
+    background-color: var(--spalva-footer);
+    color: #aab;
+    padding: 50px 0 24px;
+}
+
+.footer-turinys {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 36px;
+}
+
+.footer-blokas h4 {
+    color: var(--spalva-balta);
+    font-size: 1rem;
+    margin-bottom: 14px;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.footer-blokas p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-blokas ul {
+    list-style: none;
+}
+
+.footer-blokas ul li {
+    margin-bottom: 8px;
+}
+
+.footer-blokas ul li a {
+    color: #aab;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.footer-blokas ul li a:hover {
+    color: var(--spalva-balta);
+    text-decoration: none;
+}
+
+.footer-apacia {
+    border-top: 1px solid #2d4455;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #778;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background-color: var(--spalva-tamsi);
+        padding: 16px 24px;
+        gap: 12px;
+        border-top: 1px solid #2d4455;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 1.7rem;
+    }
+
+    .korteliu-eilute {
+        grid-template-columns: 1fr;
+    }
+
+    .foto-sekcija {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .foto-blokas {
+        height: 220px;
+    }
+
+    .zemelapis-blokas,
+    .zemelapis-blokas.reverse {
+        grid-template-columns: 1fr;
+    }
+
+    .zemelapis-blokas.reverse .zemelapis-info {
+        order: 1;
+    }
+
+    .zemelapis-blokas.reverse .iframe-wrapper {
+        order: 2;
+    }
+
+    .iframe-wrapper,
+    .iframe-wrapper iframe {
+        min-height: 320px;
+    }
+
+    .info-tinklelis {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .kontaktu-tinklelis {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-turinys {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-tinklelis {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 60px 24px;
+    }
+}
